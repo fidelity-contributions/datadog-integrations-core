@@ -2,9 +2,14 @@
 USE [master]
 GO
 
+-- test users
 CREATE LOGIN bob WITH PASSWORD = 'hey-there-bob123';
 CREATE USER bob FOR LOGIN bob;
 GRANT CONNECT ANY DATABASE to bob;
+CREATE LOGIN fred WITH PASSWORD = 'hey-there-fred123';
+CREATE USER fred FOR LOGIN fred;
+GRANT CONNECT ANY DATABASE to fred;
+GO
 
 CREATE LOGIN datadog WITH PASSWORD = 'Password12!';
 CREATE USER datadog FOR LOGIN datadog;
